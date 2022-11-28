@@ -7,6 +7,7 @@ import './App.css';
 import { icons } from 'react-icons';
 
 const App = () => {
+	const activeMenu = true;
 	return (
 		<div>
 			<BrowserRouter>
@@ -25,6 +26,13 @@ const App = () => {
 							</button>
 						</TooltipComponent>
 					</div>
+					{activeMenu ? (
+						<div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
+							SideBar
+						</div>
+					) : (
+						<div className='w-0 dark:bg-secondary-dark-bg'>SideBar W-0</div>
+					)}
 				</div>
 			</BrowserRouter>
 		</div>
