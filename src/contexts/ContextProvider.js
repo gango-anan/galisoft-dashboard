@@ -14,7 +14,7 @@ export const ContextProvider = ({ children }) => {
 	const handleClick = (clicked) => {
 		setIsClicked({ ...initialState, [clicked]: true });
 	};
-	const [screenSize, setscreenSize] = useState(undefined);
+	const [screenSize, setScreenSize] = useState(undefined);
 	return (
 		<StateContext.Provider
 			value={{
@@ -24,7 +24,7 @@ export const ContextProvider = ({ children }) => {
 				setIsClicked,
 				handleClick,
 				screenSize,
-				setscreenSize,
+				setScreenSize,
 			}}>
 			{children}
 		</StateContext.Provider>
